@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:rentcar/homepage/homepage.dart';
 
 class signup extends StatefulWidget {
   const signup({super.key});
@@ -34,15 +36,15 @@ class _signupState extends State<signup> {
               margin: EdgeInsets.only(top: 30),
               width: 200,
               child: Image.asset('assets/images/SignUp.png')),
-        const  SizedBox(
+          const SizedBox(
             height: 30,
           ),
           const Text(
             ' Sign Up',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
           ),
-         const Padding(
-            padding:  EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text('Create a beautiful relationship with us '),
           )
         ],
@@ -58,14 +60,13 @@ class _signupState extends State<signup> {
           Column(
             children: [
               Container(
-                alignment:const Alignment(-0.7, 0.0),
+                alignment: const Alignment(-0.7, 0.0),
                 padding: const EdgeInsets.all(8.0),
-                child:const Text(
+                child: const Text(
                   'Username',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
               ),
-          
               SizedBox(
                   width: 300,
                   child: TextField(
@@ -76,11 +77,11 @@ class _signupState extends State<signup> {
                         hintStyle: TextStyle(color: Colors.black38)),
                     onTap: () {},
                   )),
-            const  SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                alignment:const Alignment(-0.76, 0.0),
+                alignment: const Alignment(-0.76, 0.0),
                 padding: const EdgeInsets.all(8.0),
                 child: const Text(
                   'Email',
@@ -90,19 +91,19 @@ class _signupState extends State<signup> {
               SizedBox(
                   width: 300,
                   child: TextField(
-                    decoration:const InputDecoration(
+                    decoration: const InputDecoration(
                         border: OutlineInputBorder(borderSide: BorderSide()),
                         hintText: 'Enter Email',
                         hintStyle: TextStyle(color: Colors.black38)),
                     onTap: () {},
                   )),
-            const  SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                alignment:const Alignment(-0.7, 0.0),
+                alignment: const Alignment(-0.7, 0.0),
                 padding: const EdgeInsets.all(8.0),
-                child:const Text(
+                child: const Text(
                   'Password',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
@@ -113,14 +114,15 @@ class _signupState extends State<signup> {
                   controller: pass,
                   obscureText: isp,
                   decoration: InputDecoration(
-                      border:const OutlineInputBorder(borderSide: BorderSide()),
+                      border:
+                          const OutlineInputBorder(borderSide: BorderSide()),
                       hintText: 'Enter Password',
                       suffixIcon: visivilitybtn(),
-                      hintStyle:const TextStyle(color: Colors.black38)),
+                      hintStyle: const TextStyle(color: Colors.black38)),
                   onTap: () {},
                 ),
               ),
-            const SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Container(
@@ -130,7 +132,9 @@ class _signupState extends State<signup> {
                     color: const Color.fromARGB(255, 42, 163, 211),
                     borderRadius: BorderRadius.circular(10)),
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(()=>const homedecor());
+                    },
                     child: const Text(
                       'SignUp',
                       style: TextStyle(fontSize: 30, color: Colors.white),
@@ -150,7 +154,9 @@ class _signupState extends State<signup> {
           isp = !isp;
         });
       },
-      icon: isp == true ? const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
+      icon: isp == true
+          ? const Icon(Icons.visibility_off)
+          : const Icon(Icons.visibility),
       color: Colors.grey,
     );
   }
