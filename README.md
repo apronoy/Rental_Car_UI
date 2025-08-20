@@ -1,16 +1,29 @@
-# rentcar
+# Rental Car App Ui
 
-A new Flutter project.
+A Flutter-based Rental Car App that allows users to browse and search for cars based on company and type. The app features a clean UI and an intuitive search system to help users quickly find the car they want.
 
-## Getting Started
+## Features :
 
-This project is a starting point for a Flutter application.
+ 1. Browse different types of cars categorized by company name
 
-A few resources to get you started if this is your first Flutter project:
+ 2. Search functionality to find cars based on name, type, or company
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+ 3. Display car images with details (model, price, availability)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ 4. Clean and responsive Flutter UI
+
+## Tech Stack
+
+ 1.  Flutter for cross-platform app development
+  
+ 2.  Dart for app logic
+  
+## Future Improvements
+
+ 1. Filter cars by price, availability, or features
+  
+ 2. Booking system with date selection
+  
+ 3. User authentication and profile management
+  
+ 4. Integration with payment gateway for rentals
